@@ -1,6 +1,6 @@
 <!--
     IMPORTANT: info
-    - update13
+    - update12
     - Policy  elements can appear only within the <inbound>, <outbound>, <backend> section elements.
     - To apply a policy to the incoming request (before it is forwarded to the backend service), place a corresponding policy element within the <inbound> section element.
     - To apply a policy to the outgoing response (before it is sent back to the caller), place a corresponding policy element within the <outbound> section element.
