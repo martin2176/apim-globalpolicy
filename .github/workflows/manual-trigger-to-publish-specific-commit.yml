@@ -62,7 +62,7 @@ jobs:
      with:
       CHANNEL_NAME: "TEST_DEPLOYMENT_CHANNEL"
       MESSAGE_TITLE: "Deployment waiting for Approval."
-      MESSAGE_BODY: "There is a Deployment to Test APIM Instance waiting for Approval.Access the Workflow at: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+      MESSAGE_BODY: "There is a Deployment to Test APIM Instance waiting for Approval.Access the Workflow at: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>"
 
     Notify-MS-Teams-Prod-Channel:
      name: Notify-MS-Teams-Prod-Channel
@@ -71,7 +71,7 @@ jobs:
      with:
       CHANNEL_NAME: "PROD_DEPLOYMENT_CHANNEL"
       MESSAGE_TITLE: "Deployment waiting for Approval."
-      MESSAGE_BODY: "There is a Deployment to Prod APIM Instance waiting for Approval.Access the Workflow at: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"      
+      MESSAGE_BODY: "There is a Deployment to Prod APIM Instance waiting for Approval.Access the Workflow at: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>"      
 
     Publish-All-Artifacts-to-Dev-APIM:
      if: ${{ inputs.API_MANAGEMENT_ENVIRONMENT  == 'dev' }}
