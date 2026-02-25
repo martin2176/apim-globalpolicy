@@ -47,7 +47,7 @@ jobs:
       API_NAME_FOR_REVISIONING: ${{ inputs.API_NAME_FOR_REVISIONING }}
 
     Publish-Artifacts-to-Prod-APIM:
-     if: ${{ !failure() && !cancelled() && inputs.API_MANAGEMENT_ENVIRONMENT  == 'prod' }}
+     if: ${{ !failure() && !cancelled() }}
      needs: Create-Backup-Revision-and-Delete-Older-Revisions
      uses: martin2176/ecs-apim-workflows/.github/workflows/publish-to-prod-matrix-controller.yml@main
      with:
